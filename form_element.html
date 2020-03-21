@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function window_onload()
+        {
+            // number element
+            var elements = document.form1.elements;
+            var numberElement = document.form1.elements.length;
+            var numberElement1 = document.form1.length; // other way
+            console.log("Number elements: " + numberElement);
+            console.log("Number elements: " + numberElement1);
+
+            // print elements's attribute
+            var index;
+            for(index = 0; index < numberElement; index++) {
+                console.log(document.form1.elements[index].name);
+                console.log(document.form1.elements[index].id);
+                console.log(document.form1.elements[index].value);
+            }
+
+            // print all elements
+            console.log(document.form1.elements);
+        }
+    </script>
+</head>
+<body onload="window_onload()">
+    <form name="form1">
+        <p>This is inside form1</p>
+        <input type="text" name="txt" id="txt">
+        <input type="checkbox" name="ck" id="ck">
+        <input type="radio" name="rd" id="rd">
+        <input type="file" name="file" id="file">
+        <select name="sl" id="sl">
+            <option>1</option>
+        </select>
+        <input type="submit" name="submit" id="submit" value="save">
+    </form>
+</body>
+</html>

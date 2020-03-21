@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function window_onload()
+        {
+            // There are 2 ways to access the form element.
+            // 1. Form array
+            var numberForms = document.forms.length;
+            var index;
+            for(index = 0; index < numberForms; index++) {
+                console.log(document.forms[index].name);
+            }
+
+            // 2. Form name
+            console.log(document.form1);
+        }
+    </script>
+</head>
+<body onload="window_onload()">
+    <form name="form1">
+        <p>This is inside form1</p>
+        <input type="text" name="txt" >
+    </form>
+    <form name="form2">
+        <p>This is inside form2</p>
+    </form>
+    <form name="form3">
+        <p>This is inside form3</p>
+    </form>
+</body>
+</html>

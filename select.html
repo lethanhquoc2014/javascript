@@ -1,0 +1,34 @@
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+    function onLoad(radIndex)
+    {
+        var theDayElement = window.document.form1.theDay;
+        console.log("There are " + theDayElement.length + "options");
+        var optionCounter;
+        for (optionCounter = 0; optionCounter < theDayElement.length; optionCounter++) {
+            // theDayElement.options[optionCounter] is the same theDayElement[optionCounter]
+            console.log("Option text is " + theDayElement.options[optionCounter].text);
+            console.log(" and its value is " + theDayElement.options[optionCounter].value);
+        }
+
+        // add new day
+        var newDay = new Option("New day", 7);
+        theDayElement[7] = newDay;
+    }
+</script>
+</head>
+<body onload="onLoad()">
+    <form name=form1>
+        <select name=theDay size=5>
+            <option value=0>Monday</option>
+            <option value=1>Tuesday</option>
+            <option value=2 selected>Wednesday</option>
+            <option value=3>Thursday</option>
+            <option value=4>Friday</option>
+            <option value=5>Saturday</option>
+            <option value=6>Sunday</option>
+        </select>
+    </form>
+</body>
+</html>
