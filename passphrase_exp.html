@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function checkPassphrase()
+        {
+            var exp = /[^a-z\d]/i;
+            var passphrase = document.form1.txtPassphrase.value;
+            var isValid = exp.test(passphrase);
+            if (isValid) {
+                alert('Valid!');
+            } else {
+                alert('Invalid!');
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <p>Pass phrase (/[^a-z\d]/i):</p>
+        <input type="text" name="txtPassphrase">
+        <input type="button" name="submit" onclick="checkPassphrase()" value="Check pass phrase">
+    </form>
+</body>
+</html>

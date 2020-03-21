@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function checkExp1()
+        {
+            var exp = /\d\d/;
+            var inputToCheck = document.form1.txtExp1.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp2()
+        {
+            var exp = /\D\D\D/;
+            var inputToCheck = document.form1.txtExp2.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp3()
+        {
+            var exp = /\w\w\w\w/;
+            var inputToCheck = document.form1.txtExp3.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp4()
+        {
+            var exp = /\W\W/;
+            var inputToCheck = document.form1.txtExp4.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp5()
+        {
+            var exp = /\s/;
+            var inputToCheck = document.form1.txtExp5.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp6()
+        {
+            var exp = /\S/;
+            var inputToCheck = document.form1.txtExp6.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp7()
+        {
+            var exp = /./;
+            var inputToCheck = document.form1.txtExp7.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp8()
+        {
+            var exp = /[abc]/; //[a-z]/;
+            var inputToCheck = document.form1.txtExp8.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function checkExp9()
+        {
+            var exp = /[^abc]/; //[a-z]/;
+            var inputToCheck = document.form1.txtExp9.value;
+            var isValid = exp.test(inputToCheck);
+            showMsg(isValid);
+        }
+
+        function showMsg(isValid)
+        {
+            if (isValid) {
+                alert('Valid!');
+            } else {
+                alert('Invalid!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <p>1. <b>\d</b> Any digit from 0 to 9</p>
+        <p>Example: \d\d matches 72, but not aa or 7a</p>
+        <input type="text" name="txtExp1">
+        <input type="button" name="btn" value="Check" onclick="checkExp1()">
+
+        <p>2. <b>\D</b> Any character that is not a digit</p>
+        <p>Example: \D\D\D matches abc, but not 123 or 8ef</p>
+        <input type="text" name="txtExp2">
+        <input type="button" name="btn" value="Check" onclick="checkExp2()">
+
+        <p>3. <b>\w</b> Any word character; that is, A–Z, a–z, 0–9, and the underscore character (_)</p>
+        <p>Example: \w\w\w\w matches Ab_2, but not £$%* or Ab_@</p>
+        <input type="text" name="txtExp3">
+        <input type="button" name="btn" value="Check" onclick="checkExp3()">
+
+        <p>4. <b>\W</b> Any non-word character</p>
+        <p>Example: \W\W matches @, but not a</p>
+        <input type="text" name="txtExp4">
+        <input type="button" name="btn" value="Check" onclick="checkExp4()">
+
+        <p>5. <b>\s</b> Any whitespace character, including tab, newline, carriage return, formfeed, and vertical tab</p>
+        <p>Example: \s matches tab</p>
+        <input type="text" name="txtExp5">
+        <input type="button" name="btn" value="Check" onclick="checkExp5()">
+
+        <p>6. <b>\S</b> Any non-whitespace character</p>
+        <p>Example: \S matches A, but not the tab character</p>
+        <input type="text" name="txtExp6">
+        <input type="button" name="btn" value="Check" onclick="checkExp6()">
+
+        <p>7. <b>.</b> Any single character other than the newline character (\n)</p>
+        <p>Example: . matches a or 4 or @</p>
+        <textarea name="txtExp7"></textarea>
+        <input type="button" name="btn" value="Check" onclick="checkExp7()">
+
+        <p>8. <b>[...]</b> Any one of the characters between the brackets</p>
+        <p>Example: [abc] will match a or b or c, but nothing else <br />
+            [a-z] will match any character in the range a to z</p>
+        <input type="text" name="txtExp8">
+        <input type="button" name="btn" value="Check" onclick="checkExp8()">
+
+        <p>9. <b>[^...]</b> Any one character, but not one of those inside the brackets</p>
+        <p>Example: [^abc] will match any character except a or b or c <br />
+        [^a-z] will match any character that is not in the range a to z</p>
+        <input type="text" name="txtExp9">
+        <input type="button" name="btn" value="Check" onclick="checkExp9()">
+    </form>
+</body>
+</html>

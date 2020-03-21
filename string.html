@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var str = "Javascript is a excellent programming language.";
+        document.write(str);
+        document.write('<br />length: ' + str.length);
+        document.write('<br />charAt(2): ' + str.charAt(2));
+        document.write('<br />charCodeAt(1): ' + str.charCodeAt(1));
+        document.write('<br />indexOf("a"): ' + str.indexOf('a'));
+        document.write('<br />indexOf("A"): ' + str.indexOf('A'));
+        document.write('<br />lasIndexOf("a"): ' + str.lastIndexOf('a'));
+        document.write('<br />substr(10, 20):' + str.substr(10, 20));
+        document.write('<br />substring(10, 20):' + str.substring(10, 20));
+        document.write('<br />toLocaleLowerCase():' + str.toLocaleLowerCase());
+        document.write('<br />toLowerCase():' + str.toLowerCase());
+        document.write('<br />toLocaleUpperCase():' + str.toLocaleUpperCase());
+        document.write('<br />toUpperCase():' + str.toUpperCase());
+        document.write('<br />replace("Javascript", "PHP"):' + str.replace("Javascript", "PHP"));
+        document.write('<br />search("excellent"): ' + str.search("excellent"));
+        document.write('<br />search("java"): ' + str.search("java"));
+
+        str = "Quoc, Trang, An";
+        document.write('<br /><br />');
+        document.write(str);
+        document.write('<br />split(",") will return an array');
+        var names = str.split(',');
+        names.forEach(function(value, key) {
+            document.write('<br />' + key + ": " + value);
+        });
+
+        document.write('<br /><br />');
+        document.write('split(":"): ');
+        names = str.split(':');
+        names.forEach(function(value, key) {
+            document.write('<br />' + key + ": " + value);
+        });
+
+        str = "1997, 1998, 1999, 2000, 2000, 2001, 2002";
+        document.write('<br /><br />');
+        document.write(str);
+        document.write('<br />match("2000") will return an array');
+        var searchYears = str.match('2000');
+        searchYears.forEach(function(value, key) {
+            document.write('<br />' + key + ": " + value);
+        });
+
+        str = "Paul, Paula, Pauline, paul, Paul";
+        document.write('<br /><br />');
+        document.write('Regular expression');
+        document.write('<br />' + str);
+        document.write('<br />replace(/Paul/, "Ringo"): ' + str.replace(/Paul/, 'Ringo'));
+        document.write('<br />replace(/Paul/g, "Ringo"): ' + str.replace(/Paul/g, 'Ringo'));
+        document.write('<br />replace(/Paul/gi, "Ringo"): ' + str.replace(/Paul/gi, 'Ringo'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
